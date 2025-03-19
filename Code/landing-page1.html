@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Encyclopedia</title>
+    <link rel="stylesheet" href="landing-page.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h3>Wild <br> Wonders</h3>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="landing-page.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="animals.html">Animals</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="login"><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <section class="hero">
+        <div class="hero-container">
+            <!-- Left Side: Text Content -->
+            <div class="hero-text">
+                <div class="title">
+                    <h1>Wild Wonders Encyclopedia</h1>
+                </div>
+                <div class="sub">
+                    <p>We bring the animal kingdom to life with fascinating discoveries. Join us today and explore the wonders of wildlife like never before!</p>
+                    <a href="animals.html"><button class="book">A-Z Animals</button></a>
+                    <a href="\Landing Page\about.html"><button class="why">About Us</button></a>
+                </div>
+    
+                <!-- Search Bar -->
+                <section class="search-section">
+                    <input type="text" id="search" placeholder="Search for an animal...">
+                    <button onclick="searchAnimal()">Search</button>
+                </section>
+            </div>
+    
+            <!-- Right Side: Slideshow -->
+            <div class="hero-slideshow">
+                <div class="slide-container">
+                    <img class="slides" src="\Landing Page\elephant.jpg" alt="Elephant">
+                    <img class="slides" src="\Landing Page\tiger.jpg" alt="Tiger">
+                    <img class="slides" src="\Landing Page\lion.jpg" alt="Lion">
+                    <img class="slides" src="\Landing Page\penguin.jpg" alt="Penguin">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Animals -->
+    <section class="featured-animals">
+        <h2>Featured Mammals</h2>
+        <div class="animal-grid">
+            <div class="animal-card">
+                <img src="\Landing Page\lion.jpg" alt="Lion">
+                <h3>Lion</h3>
+                <p>The king of the jungle known for its majestic mane.</p>
+                <a href="#">More</a>
+            </div>
+            <div class="animal-card">
+                <img src="\Landing Page\panda.jpg" alt="Panda">
+                <h3>Giant Panda</h3>
+                <p>A lovable bear that enjoys eating bamboo.</p>
+                <a href="#">More</a>
+            </div>
+            <div class="animal-card">
+                <img src="\Landing Page\leopard.jpg" alt="Leopard">
+                <h3>Leopard</h3>
+                <p>A stealthy predator with a spotted coat.</p>
+                <a href="#">More</a>
+            </div>
+            <div class="animal-card">
+                <img src="\Landing Page\rhino.jpg" alt="Rhino">
+                <h3>Rhino</h3>
+                <p>A powerful herbivore with an iconic horn.</p>
+                <a href="#">More</a>
+            </div>
+            <div class="animal-card">
+                <img src="\buffalo.jpg" alt="Buffalo">
+                <h3>Buffalo</h3>
+                <p>A strong grazer known for its resilience.</p>
+                <a href="#">More</a>
+            </div>
+        </div>
+    </section>
+    <section class="featured-birds">
+        <h2>Featured Birds</h2>
+        <div class="animal-grid">
+            <div class="animal-card">
+                <img src="\eagle.jpg" alt="Eagle">
+                <h3>Bald Eagle</h3>
+                <p>A symbol of strength and freedom.</p>
+            </div>
+            <div class="animal-card">
+                <img src="\robin.jpg" alt="Robin">
+                <h3>Giant Panda</h3>
+                <p>A lovable bear that enjoys eating bamboo.</p>
+            </div>
+            <div class="animal-card">
+                <img src="\puffin.jpg" alt="Puffin">
+                <h3>Leopard</h3>
+                <p>A symbol of strength and freedom.</p>
+            </div>
+            <div class="animal-card">
+                <img src="\budgie.jpg" alt="Budgie">
+                <h3>Rhino</h3>
+                <p>A powerful herbivore with an iconic horn.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Wild Wonders Encyclopedia | All Rights Reserved</p>
+    </footer>
+    
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+</body>
+</html>
