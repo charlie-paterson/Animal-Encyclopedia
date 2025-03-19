@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    color: white;
+}
+
+nav .logo img {
+    margin: 0;
+    height: 100px;
+    padding: 0;
+}
+
+.nav-bar a:hover {
+    border-bottom: 2px solid #3498db;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-bar ul li {
+    margin: 0 15px;
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.book {
+    background-color: #228b22;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.book:hover {
+    background-color: #145814;
+}
+
+.why {
+    background-color: #8B4513;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.why:hover {
+    background-color: #51280b;
+}
+
+/* Search Bar */
+.search-section {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.search-section input {
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-section button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+    max-width: 40%; /* Takes up half of the page */
+}
+
+.hero h1 {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .hero-container .sub p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-slideshow {
+    flex: 1;
+    max-width: 60%; /* Takes up the other half */
+    display: flex;
+    justify-content: center;
+}
+
+.slide-container {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    height: 500px;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images scale properly */
+    border-radius: 10px;
+}
+
+/* Featured Animals Section */
+.featured-animals {
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+.featured-animals h2 {
+    margin-bottom: 20px;
+}
+
+.animal-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+.animal-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #228b22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.animal-card a:hover {
+    background-color: #145814;
+}
+.animal-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    text-align: center;
+}
+
+.animal-card h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.animal-card img {
+    width: 100%; /* Makes images stretch to fit the container */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.featured-birds {
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+.featured-birds h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column; /* Stacks text above slideshow */
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-slideshow {
+        max-width: 100%;
+    }
+
+    .slide-container {
+        max-width: 100%;
+        height: auto;
+    }
+}
